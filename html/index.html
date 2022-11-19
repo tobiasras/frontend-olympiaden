@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+
+
+  <link rel="stylesheet" href="../css/stylesheet.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+
+  <script src="../js/crudTournament.js"></script>
+
+</head>
+
+
+
+
+<body>
+  <nav class="navbar navbar-light bg-light p-3 m-l">
+    <a class="navbar-brand ms-5" href="#">Navbar</a>
+
+    <div class="d-flex justify-content-start me-5">
+      <a class="nav-item nav-link p-2" href="#">Home</a>
+      <a class="nav-item nav-link p-2 " href="#">Features</a>
+    </div>
+
+    </div>
+  </nav>
+
+  <div class="d-flex flex-column flex-lg-row justify-content-between p-sm-0 p-lg-5">
+
+    <!-- Form -->
+    <div class="border p-3 bg-light align-content-lg-start align-self-baseline width-element">
+      <h2>Create tournament</h2>
+      <p>press create to start building a process</p>
+      <form onsubmit="createTournament(event)" name="form" id="form-tour">
+        <div class="form-group">
+          <label for="game-name">Whats the name of the game</label>
+          <input type="text" class="form-control" name="name" id="game-name" required placeholder="name"
+            maxlength="25" />
+        </div>
+        <button id="submit-tournament" class="btn btn-dark mt-3">
+          Create
+        </button>
+      </form>
+
+    </div>
+
+
+    <!-- Tournaments -->
+    <divs class="border bg-light p-3 align-self-center width-element">
+      <h2>Tournaments</h2>
+      <div id="table-tournament" class="p-4 border bg-white"></div>
+    </divs>
+
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal" id="acceptModal">
+    <div class="modal-dialog bg-opacity-75">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Deleting: <span id="tournament-name"></span></h2>
+        </div>
+
+        <div class="modal-body">
+          <p>Are u sure u wanna delete the tournament</p>
+        </div>
+        <div class="modal-footer">
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary m-1" id="accept">Confirm</button>
+            <button class="btn btn-dark m-1" id="decline">Abort</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../js/tournaments.js"></script>
+
+  <script src="../js/tournamentSession.js"></script>
+
+
+
+</body>
+
+</html>
